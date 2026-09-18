@@ -1,6 +1,24 @@
-import { HomeLayout } from 'fumadocs-ui/layouts/home';
-import { baseOptions } from '@/lib/layout.shared';
+import type { Metadata } from 'next';
 
-export default function Layout({ children }: LayoutProps<'/'>) {
-  return <HomeLayout {...baseOptions()}>{children}</HomeLayout>;
+export const metadata: Metadata = {
+  title: 'Dokumentasi teem.id',
+  description: 'Dokumentasi resmi platform teem.id',
+  // Tambahkan konfigurasi favicon di sini
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="id" suppressHydrationWarning>
+      <body>{children}</body>
+    </html>
+  );
 }

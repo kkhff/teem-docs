@@ -1,0 +1,98 @@
+---
+title: Saldo Saya
+icon: Wallet
+---
+
+
+Halaman **Saldo Saya** merupakan fitur dompet digital (*e-wallet*) internal pada platform **teem.id**. Halaman ini memfasilitasi pengguna untuk memantau sisa saldo, melakukan pengisian saldo (*top-up*), mengajukan penarikan dana (*withdrawal*), serta melihat riwayat mutasi transaksi saldo secara transparan.
+
+---
+
+## 1. Top-Up Saldo
+
+Fitur ini digunakan untuk menambah jumlah nominal saldo teem.id Anda melalui berbagai kanal pembayaran digital.
+
+### Langkah-Langkah Top-Up Saldo:
+1. Klik tombol **[Top Up]** yang berada tepat di bawah tampilan nominal saldo Anda.
+2. Masukkan nominal saldo yang ingin Anda isi. Anda juga dapat memilih *preset/template* nominal yang telah disediakan (seperti Rp20.000, Rp50.000, dst.).
+3. Pilih **Metode Pembayaran** yang diinginkan (Transfer Bank, E-Wallet, atau QRIS).
+4. Periksa kembali rincian transaksi Anda, lalu klik **[Bayar Sekarang]**.
+5. Sistem akan mengarahkan Anda ke halaman gateway pembayaran **Xendit** untuk menyelesaikan transaksi.
+6. Setelah pembayaran berhasil dikonfirmasi, status transaksi akan berubah menjadi sukses dan saldo akun Anda akan bertambah secara otomatis.
+
+![Tampilan form topup](/image/topup.png)
+
+---
+
+## 2. Pengelolaan Rekening Tujuan
+
+Sebelum melakukan penarikan saldo, Anda diwajibkan untuk mendaftarkan akun rekening bank atau e-wallet terlebih dahulu. Anda dapat menambahkan lebih dari satu akun rekening tujuan.
+
+### Langkah-Langkah Menambah Rekening:
+1. Klik tombol **[+ Tambah]** pada bagian area **Rekening Tujuan**.
+2. Pilih jenis Bank atau penyedia E-Wallet tujuan Anda.
+3. Masukkan **Nomor Rekening** atau **Nomor Telepon** (untuk E-Wallet).
+4. Masukkan **Nama Pemilik Rekening** sesuai dengan data resmi pada buku tabungan/aplikasi.
+5. Klik **[Simpan Rekening]** untuk menyimpan data.
+
+![Tampilan form tambah rekening](/image/tambah-rekening.png)
+
+
+---
+
+---
+## 3. Tarik Saldo (Withdrawal)
+
+Anda dapat mencairkan saldo teem.id ke rekening bank atau e-wallet yang telah didaftarkan sebelumnya melalui 3 tahapan mudah.
+
+### Langkah-Langkah Penarikan Saldo:
+
+1. **Akses Menu Penarikan**  
+   Klik tombol **[Tarik Saldo]** yang berada di samping tombol *Top Up*.
+
+2. **Tahap 1: Input Nominal**  
+   * Pilih **Rekening Tujuan** yang sudah Anda daftarkan.
+   * Masukkan **Nominal Penarikan** secara manual atau pilih persentase penarikan cepat (*25%*, *50%*, atau *Semua Saldo*).
+   * Klik tombol **[Lanjut >]**.
+
+![Form Penarikan Saldo Tahap Nominal](/image/tarik-saldo-1.png)
+
+3. **Tahap 2: Konfirmasi Data**  
+   * Periksa kembali rincian nama pemilik, bank/no. rekening, biaya admin, dan total dana yang diterima.
+   * Beri tanda centang pada kolom persetujuan:  
+     `[✓] Saya sudah memeriksa data rekening dan nominal penarikan di atas, dan menyatakan sudah benar.`
+   * Klik tombol **[Konfirmasi & Kirim Penarikan]**.
+
+![Form Penarikan Saldo Tahap Konfirmasi](/image/tarik-saldo-2.png)
+
+4. **Tahap 3: Selesai & Status Pengajuan**  
+   * Sistem akan menampilkan nomor ID penarikan (misal: `WD-C6492934`) beserta status **Menunggu Persetujuan**.
+   * Klik tombol **[Selesai]** untuk menutup tampilan modal.
+
+![Form Penarikan Saldo Tahap Selesai](/image/tarik-saldo-3.png)
+
+> **Catatan Alur Transaksi:**  
+> Setelah pengajuan terkirim, saldo aktif Anda akan ditahan sementara hingga disetujui oleh Admin.  
+> * **Disetujui:** Dana akan langsung ditransfer ke rekening tujuan Anda.
+> * **Ditolak:** Saldo yang ditahan akan otomatis dikembalikan (*refund*) ke saldo aktif teem.id Anda.
+
+
+---
+
+## 4. Riwayat Transaksi Saldo
+
+Pada bagian bawah halaman, Anda dapat memantau seluruh catatan mutasi keluar dan masuknya saldo akun Anda.
+
+### Informasi yang Ditampilkan:
+* **ID Transaksi:** Kode unik referensi transaksi.
+* **Keterangan:** Informasi aktivitas (misal: *Top Up*, *Penarikan Saldo*, atau *Pembayaran Pesanan*).
+* **Nominal:** Jumlah saldo yang masuk (+) atau keluar (-).
+* **Status Transaksi:** Indikator status (*Sukses*, *Pending*, atau *Gagal*).
+* **Tanggal & Waktu:** Waktu presisi saat transaksi diproses.
+
+### Fitur Pencarian & Filter:
+* **Pencarian:** Cari data mutasi secara spesifik menggunakan **ID Transaksi** atau **Keterangan**.
+* **Filter:** Saring riwayat mutasi berdasarkan **Rentang Tanggal** tertentu maupun **Jenis Transaksi** (Saldo Masuk / Saldo Keluar).
+
+![Tampilan riwayat saldo](/image/riwayat-saldo.png)
+
