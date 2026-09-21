@@ -1,0 +1,8 @@
+{
+  "title": "Status & Proses Pesanan",
+  "icon": "PackageCheck",
+  "pages": [
+    "dikirim-kurir",
+    "ambil-sendiri"
+  ]
+}

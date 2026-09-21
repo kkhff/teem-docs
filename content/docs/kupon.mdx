@@ -1,0 +1,57 @@
+---
+title: Kupon Diskon
+icon: Ticket
+---
+
+Fitur **Kupon Diskon** pada platform **teem.id** memungkinkan pengguna untuk mendapatkan potongan harga tambahan pada total transaksi pemesanan produk. Kode kupon secara berkala bagikan melalui kanal media sosial resmi teem.id maupun program promosi khusus.
+
+---
+
+## 1. Cara Menggunakan Kupon Diskon
+
+Penggunaan kode kupon dapat dilakukan langsung pada halaman **Checkout** saat memproses pemesanan.
+
+### Langkah-Langkah Penggunaan:
+1. Pilih produk yang ingin dibeli dan masuk ke halaman **Checkout**.
+2. Cari bagian **Ringkasan Belanja / Kode Promo**.
+3. Masukkan kode kupon yang valid (contoh: `1707UY`) pada kolom input yang tersedia.
+4. Klik tombol **[Pakai]**.
+5. Jika kode kupon memenuhi seluruh syarat dan ketentuan, rincian potongan harga akan langsung memotong total pembayaran Anda.
+![Tampilan Input Kupon Diskon](/image/kupon-checkout.png)
+
+---
+
+## 2. Syarat & Ketentuan Penggunaan Kupon
+
+Setiap kupon memiliki aturan dan kriteria penerapannya masing-masing yang dikonfigurasi oleh admin. Potongan harga hanya akan berlaku apabila pemesanan Anda memenuhi kombinasi kriteria berikut:
+
+### A. Tipe & Nominal Diskon
+* **Nominal:** Potongan harga berupa nilai rupiah tetap (misalnya: Potongan Rp5.000).
+* **Persentase:** Potongan harga berdasarkan persentase total belanja.
+
+### B. Batas Maksimal Diskon 
+Untuk kupon tipe persentase, sistem dapat membatasi batas maksimum nominal potongan rupiah yang bisa didapatkan.
+
+### C. Batas Minimal Pembelian & Kuantitas 
+* **Minimal Pembelian (Rp):** Jumlah minimum total nominal belanja agar kupon dapat digunakan .
+* **Minimal Kuantitas (Qty):** Jumlah minimum unit/produk yang wajib dibeli agar kupon valid .
+
+### D. Periode Masa Berlaku 
+Kupon hanya dapat digunakan dalam rentang tanggal dan waktu yang telah ditentukan. Kupon tidak akan berlaku sebelum tanggal mulai (`start_date`) atau setelah melewati tanggal kadaluwarsa (`end_date`).
+
+### E. Pembatasan Pengguna 
+* **Pengguna Baru:** Kupon khusus yang hanya dapat diklaim oleh akun yang belum pernah melakukan transaksi sebelumnya.
+* **Batas Penggunaan Pengguna:** Batas maksimal kupon dapat digunakan oleh satu akun pengguna .
+* **Batas Total Kuota:** Batas maksimal akumulasi penggunaan kupon secara keseluruhan di platform .
+
+### F. Batas Wilayah Pengiriman 
+Beberapa kupon promosi dirancang khusus untuk area geografis tertentu berdasarkan data Provinsi, Kota/Kabupaten, Kecamatan, hingga Desa/Kelurahan.
+
+### G. Metode Pembayaran Spesifik 
+Kupon mungkin hanya berlaku jika Anda memilih metode pembayaran tertentu (seperti *Saldo teem.id*, *Virtual Account*, atau *QRIS*).
+
+---
+
+> **Catatan:**  
+> Jika kode kupon gagal digunakan, pastikan kembali apakah pemesanan Anda sudah memenuhi seluruh syarat minimal transaksi, periode promo, serta kuota penggunaan kupon yang berlaku.
+

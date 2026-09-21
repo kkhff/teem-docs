@@ -1,0 +1,51 @@
+---
+title: Ambil Sendiri
+icon: Store
+---
+
+
+Metode pengiriman **Ambil Sendiri** memungkinkan pembeli untuk mengambil pesanan secara mandiri langsung ke lokasi toko atau tempat mitra teem.id terdekat. Halaman ini menjelaskan alur status pesanan serta alur konfirmasi saat barang siap diambil.
+
+---
+
+## Tahapan Status Pesanan
+
+### 1. Menunggu Diproses Penjual (*Pending Approval*)
+Status awal setelah pembayaran transaksi berhasil dikonfirmasi. Pada tahap ini, sistem menunggu penjual untuk memverifikasi dan menyetujui pesanan Anda.
+
+![Status Menunggu Diproses Penjual](/image/wait-ambil-order.png)
+
+> **Pembatalan Pesanan:**  
+> Jika pihak penjual/mitra menolak atau tidak merespon pesanan dalam batas waktu yang ditentukan, sistem akan secara otomatis mengubah status pesanan menjadi **Dibatalkan** dan mengembalikan saldo/dana transaksi ke akun Anda.
+
+![Status Pesanan Dibatalkan](/image/batal-ambil-order.png)
+
+---
+
+### 2. Diproses Penjual (*Processing*)
+Penjual telah menerima pesanan dan sedang menyiapkan produk di lokasi toko/mitra agar siap diserahterimakan kepada pembeli.
+
+![Status Diproses Penjual](/image/proses-ambil-order.png)
+
+---
+
+### 3. Siap Diambil (*Ready for Pickup*)
+Produk telah selesai disiapkan oleh penjual dan siap untuk diambil. Pada tahap ini:
+1. Status pesanan di aplikasi akan berubah menjadi **Siap Diambil**.
+2. Konsumen akan menerima **notifikasi WhatsApp otomatis** yang menginformasikan bahwa pesanan sudah siap diambil di toko mitra, beserta rincian batas waktu pengambilan.
+
+![Status Pesanan Siap Diambil](/image/ready-ambil-order.png)
+
+#### Notifikasi WhatsApp Pengambilan
+Sistem akan mengirimkan pesan WhatsApp berisi nomor invoice, jarak ke toko mitra, serta batas waktu pengambilan barang (maksimal 2 hari sejak notifikasi dikirim).
+
+![Notifikasi WA Pesanan Siap Diambil](/image/notifikasi-wa-ambil.png)
+
+---
+
+### 4. Pesanan Selesai (*Completed*)
+Pesanan dinyatakan selesai melalui dua kondisi berikut:
+1. **Konfirmasi Manual:** Pembeli telah mendatangi lokasi toko/mitra, menerima produk fisik, dan menekan tombol **[Selesaikan Pesanan]**.
+2. **Auto-Complete Sistem:** Apabila barang tidak diambil hingga batas waktu yang telah ditentukan (2 hari sejak notifikasi diterbitkan), maka sistem akan secara otomatis menyelesaikan pesanan tersebut.
+
+![Status Pesanan Selesai](/image/selesai-ambil-order.png)

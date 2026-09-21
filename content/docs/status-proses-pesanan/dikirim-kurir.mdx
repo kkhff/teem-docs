@@ -1,0 +1,43 @@
+---
+title: Dikirim Kurir
+icon: Truck
+---
+
+Metode pengiriman **Dikirim Kurir** menggunakan jasa pihak ekspedisi/logistik untuk mengantarkan produk dari pihak penjual langsung ke alamat tujuan pembeli. Halaman ini menjelaskan seluruh alur dan perubahan status pesanan secara bertahap selama proses pengiriman berlangsung.
+
+---
+
+## Tahapan Status Pesanan
+
+### 1. Menunggu Diproses Penjual (*Pending Approval*)
+Status awal setelah pembayaran transaksi berhasil dikonfirmasi. Pada tahap ini, sistem menunggu penjual untuk memverifikasi dan menyetujui pesanan Anda.
+
+![Status Menunggu Diproses Penjual](/image/wait-kurir-order.png)
+
+> **Pembatalan Pesanan:**  
+> Jika pihak penjual menolak atau tidak merespon pesanan dalam batas waktu yang ditentukan, sistem akan secara otomatis mengubah status pesanan menjadi **Dibatalkan** dan mengembalikan saldo/dana transaksi ke akun Anda.
+
+![Status Pesanan Dibatalkan](/image/batal-kurir-order.png)
+
+---
+
+### 2. Diproses Penjual (*Processing*)
+Penjual telah menerima pesanan dan sedang melakukan proses pengemasan (*packing*) serta menyiapkan barang agar siap diserahkan kepada pihak ekspedisi logistik.
+
+![Status Diproses Penjual](/image/proses-kurir-order.png)
+
+---
+
+### 3. Dalam Perjalanan (*In Transit*)
+Pesanan telah diserahkan ke pihak kurir ekspedisi dan sedang dalam proses pengiriman menuju alamat tujuan Anda. Pada tahap ini, nomor resi (AWB) telah terbit dan Anda dapat memantau pergerakan posisi paket secara berkala.
+
+![Status Pesanan Dalam Perjalanan](/image/kirim-kurir-order.png)
+
+---
+
+### 4. Pesanan Selesai (*Completed*)
+Pesanan dinyatakan selesai melalui dua kondisi berikut:
+1. **Konfirmasi Manual:** Pembeli telah menerima paket fisik dan melakukan konfirmasi penerimaan barang dengan menekan tombol **[Selesaikan Pesanan]**.
+2. **Auto-Complete Sistem:** Apabila kurir telah mengonfirmasi bahwa paket telah sampai di alamat tujuan namun pembeli tidak melakukan konfirmasi manual dalam kurun waktu **24 jam**, maka sistem akan secara otomatis mengubah status pesanan menjadi **Selesai**.
+
+![Status Pesanan Selesai](/image/selesa-kuriri-order.png)
