@@ -11,21 +11,27 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <DocsLayout
       tree={source.getPageTree()}
       {...base}
-      nav={{ ...base.nav, enabled: true }}
-      // Top navbar (DocsHeader) punya search + theme switch sendiri,
-      // jadi matikan yang ada di dalam sidebar biar tidak dobel.
+      nav={{ 
+        ...base.nav, 
+        enabled: true,
+      }}
+      // Hilangkan tombol bawaan sidebar agar tidak duplikat dengan DocsHeader
       searchToggle={{ enabled: false }}
       themeSwitch={{ enabled: false }}
       slots={{ header: DocsHeader }}
+      sidebar={{
+        collapsible: true,
+      }}
       containerProps={{
         style: {
           gridTemplate:
-            '"sidebar sidebar header header header"\n' +
+            '"header header header header header"\n' +
             '"sidebar sidebar toc-popover toc toc"\n' +
             '"sidebar sidebar main toc toc" 1fr / ' +
             'minmax(min-content, 1fr) var(--fd-sidebar-col) ' +
             'minmax(0, calc(var(--fd-layout-width,97rem) - var(--fd-sidebar-width) - var(--fd-toc-width))) ' +
             'var(--fd-toc-width) minmax(min-content, 1fr)',
+          '--fd-docs-row-1': 'var(--fd-header-height)',
           '--fd-header-height': '3.5rem',
         } as CSSProperties,
       }}

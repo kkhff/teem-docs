@@ -10,10 +10,30 @@ import {
   SearchTrigger,
 } from 'fumadocs-ui/layouts/shared/slots/search-trigger';
 import { ThemeSwitch } from 'fumadocs-ui/layouts/shared/slots/theme-switch';
+import { useSidebar } from 'fumadocs-ui/layouts/docs/slots/sidebar';
 import { SidebarIcon } from 'lucide-react';
 
+function SidebarToggle() {
+  const { mode, open, setOpen, collapsed, setCollapsed } = useSidebar();
+
+  return (
+    <button
+      type="button"
+      aria-label="Toggle sidebar"
+      onClick={() =>
+        mode === 'drawer' ? setOpen(!open) : setCollapsed(!collapsed)
+      }
+      className={cn(
+        buttonVariants({ variant: 'ghost', size: 'icon-sm', className: 'p-2' }),
+      )}
+    >
+      <SidebarIcon />
+    </button>
+  );
+}
+
 export function DocsHeader(props: ComponentProps<'header'>) {
-  const { slots, navItems } = useDocsLayout();
+  const { navItems } = useDocsLayout();
 
   const links = navItems.filter(
     (item): item is Extract<LinkItemType, { url: string }> =>
@@ -49,14 +69,7 @@ export function DocsHeader(props: ComponentProps<'header'>) {
       <div className="flex flex-1 items-center justify-end gap-1.5">
         <SearchTrigger hideIfDisabled className="p-2 lg:hidden" />
         <ThemeSwitch className="px-2.5" />
-        <slots.sidebar.trigger
-          className={cn(
-            buttonVariants({ variant: 'ghost', size: 'icon-sm', className: 'p-2' }),
-            'md:hidden',
-          )}
-        >
-          <SidebarIcon />
-        </slots.sidebar.trigger>
+        <SidebarToggle />
       </div>
     </header>
   );

@@ -13,8 +13,14 @@ html > body[data-scroll-locked] {
   --removed-body-scroll-bar-size: 0px !important;
 }
 
-/* TOC: pin di bawah navbar (sidebar sudah menempati row 1, tidak perlu patch) */
+/* TOC: pin di bawah header full-width (sidebar & TOC mulai tepat setelah header) */
 #nd-docs-layout [grid-area='toc'] {
-  top: var(--fd-docs-row-2);
-  height: calc(var(--fd-docs-height) - var(--fd-docs-row-2));
+  top: var(--fd-docs-row-1);
+  height: calc(var(--fd-docs-height) - var(--fd-docs-row-1));
+}
+
+/* Toggle sidebar sudah ada di navbar, jadi floating panel kiri
+   (☰ + search) yang muncul saat sidebar collapse disembunyikan. */
+[data-sidebar-panel] {
+  display: none;
 }
