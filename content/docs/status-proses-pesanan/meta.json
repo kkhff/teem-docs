@@ -3,6 +3,7 @@
   "icon": "PackageCheck",
   "pages": [
     "dikirim-kurir",
-    "ambil-sendiri"
+    "ambil-sendiri",
+    "pembatalan-pesanan"
   ]
 }

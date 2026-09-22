@@ -1,0 +1,54 @@
+---
+title: Pembatalan Pesanan
+icon: CircleX
+---
+
+Fitur **Pembatalan Pesanan** memungkinkan pembeli untuk membatalkan transaksi apabila terjadi perubahan keputusan atau kesalahan pembelian. Pembatalan pesanan hanya dapat dilakukan pada **3 status pesanan awal**, yaitu: **Menunggu Pembayaran**, **Menunggu Diproses Penjual**, dan **Diproses Penjual**.
+
+---
+
+## Ketentuan & Cara Membatalkan Pesanan
+
+### 1. Status Menunggu Pembayaran (*Pending Payment*)
+Pada tahap ini, transaksi pembayaran belum diselesaikan oleh pembeli. 
+
+* **Proses Pembatalan:** Anda dapat membatalkan pesanan secara langsung tanpa memerlukan persetujuan dari pihak penjual.
+* **Dampak Sistem:** Pesanan akan langsung berubah status menjadi **Dibatalkan** dan kode/instruksi pembayaran otomatis kedaluwarsa.
+
+![Pembatalan pada Status Menunggu Pembayaran](/image/cancel-pending.png)
+
+---
+
+### 2. Status Menunggu Diproses Penjual (*Pending Approval*)
+Pada tahap ini, pembayaran telah berhasil dikonfirmasi oleh sistem, namun pihak penjual belum memproses pesanan tersebut.
+
+* **Proses Pembatalan:** Anda dapat mengajukan pembatalan pesanan secara langsung dari halaman rincian pesanan.
+* **Pengembalian Dana (*Refund*):** Karena pesanan belum masuk tahap pengerjaan/pengemasan oleh penjual, pengajuan pembatalan akan disetujui secara otomatis dan **dana pembayaran akan langsung dikembalikan (*auto-refund*)** ke akun teem.id Anda.
+
+![Pengembalian Dana Otomatis](/image/cancel-refund.png)
+
+---
+
+### 3. Status Diproses Penjual (*Processing*)
+Pada tahap ini, penjual telah menerima pesanan dan sedang menyiapkan/mengemas produk.
+
+* **Proses Pembatalan:** Pembatalan pada status ini memerlukan persetujuan (*approval*) dari pihak penjual terlebih dahulu.
+
+![Status pembatalan](/image/cancel-approval.png)
+
+* **Kondisi Pengajuan:**
+  * **Jika Disetujui Penjual (*Approved*):** Status pesanan akan berubah menjadi **Dibatalkan**, dan dana transaksi akan dikembalikan (*refund*) ke akun Anda.
+  
+  ![Pembatalan Disetujui Penjual](/image/cancel-approval-acc.png)
+
+  * **Jika Ditolak Penjual (*Rejected*):** Pengajuan pembatalan dibatalkan oleh penjual, dan status pesanan akan tetap berlanjut pada tahap **Diproses Penjual** hingga siap dikirim/diambil.
+
+  ![Pembatalan Ditolak Penjual](/image/cancel-approval-reject.png)
+
+---
+
+> **Ketentuan Pengembalian Dana (Refund):**  
+> Apapun metode pembayaran yang digunakan saat transaksi awal (baik melalui **Saldo Aplikasi** maupun kanal **Xendit** seperti Virtual Account, E-Wallet, atau QRIS), seluruh dana pengembalian (*refund*) pembatalan pesanan akan dialokasikan dan masuk secara otomatis ke **Saldo Aplikasi teem.id** Anda.
+
+> **Catatan Tambahan:**  
+> Apabila pesanan sudah berpindah ke status **Dalam Perjalanan / Dikirim Kurir** atau **Siap Diambil**, tombol pengajuan pembatalan tidak dapat digunakan kembali secara mandiri.
