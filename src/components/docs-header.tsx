@@ -50,6 +50,7 @@ export function DocsHeader(props: ComponentProps<'header'>) {
       )}
     >
       <div className="flex flex-1 items-center gap-1">
+        <SidebarToggle />
         <ul className="hidden flex-row items-center gap-1 lg:flex">
           {links.map((item, i) => (
             <LinkItem
@@ -69,7 +70,6 @@ export function DocsHeader(props: ComponentProps<'header'>) {
       <div className="flex flex-1 items-center justify-end gap-1.5">
         <SearchTrigger hideIfDisabled className="p-2 lg:hidden" />
         <ThemeSwitch className="px-2.5" />
-        <SidebarToggle />
       </div>
     </header>
   );
